@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            function trataClique(){
+                console.log("botao clicado");
+                console.log("evento", window.event);
+            }
+
+            function trataTeclado(){
+                console.log("teclado digitado");
+                console.log("evento", window.event);
+            }
+
+            function carregaTela(){
+                console.log("Tela carregada");
+                console.log("evento", window.event);
+            }
+        </script>
+    </head>
+    <body onload="carregaTela()">
+        <form action="" method="POST">
+            <input type="text" onkeypress="trataTeclado()" name="n1" />
+            <input type="button" value="Ordena valores" onclick="trataClique()" />
+        </form>
+    </body>
+</html>
